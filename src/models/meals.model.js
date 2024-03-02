@@ -25,4 +25,9 @@ const mealSchema = mongoose.connect({
     type: String,
     required: true,
   },
+},
+{
+  timestamps: true,
 });
+
+module.exports.Meals = mongoose.Model('Meals', mealSchema);
