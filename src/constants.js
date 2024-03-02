@@ -1,3 +1,3 @@
-DB_NAME = 'Meal_wala';
+DB_NAME = 'mealwallah';
 
 module.exports.DB_NAME = DB_NAME;

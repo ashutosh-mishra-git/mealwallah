@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
 const { DB_NAME } = require('../constants');
-// console.log(DB_NAME);
 
 const connectDB = async () => {
-  console.log(DB_NAME);
+  db_url = `mongodb+srv://mealwallah:dYDElQsOBMZu64Ok@cluster0.vn0ojj2.mongodb.net/${DB_NAME}`;
+
   try {
-    mongoose.connect('');
+    mongoose.connect(db_url);
   } catch (error) {
     console.log('Connection failed', error.message);
   }
