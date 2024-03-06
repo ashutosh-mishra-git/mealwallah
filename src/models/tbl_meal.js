@@ -28,4 +28,4 @@ const mealSchema = mongoose.connect(
   }
 );
 
-module.exports.Meals = mongoose.Model('Meals', mealSchema);
+module.exports = mongoose.Model('Meals', mealSchema);

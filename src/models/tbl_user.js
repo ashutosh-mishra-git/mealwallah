@@ -4,6 +4,10 @@ const jwt = require('jsonwebtoken');
 
 const userSchema = mongoose.Schema(
   {
+    name: {
+      type: String,
+      required: true,
+    },
     username: {
       type: String,
       required: true,
@@ -15,15 +19,31 @@ const userSchema = mongoose.Schema(
     email: {
       type: String,
     },
-    org: {
-      type: String, // create another model for organisation and use _id here
-      required: true,
-    },
     password: {
       type: String,
       required: true,
     },
-    refreshToken: String,
+    refreshToken: {
+      type: String,
+    },
+    deleted_by: {
+      type: mongoose.Schema.ObjectId,
+      ref: 'User',
+    },
+    last_modified: {
+      type: mongoose.Schema.ObjectId,
+      ref: 'User',
+    },
+    deleted: {
+      type: Boolean,
+      default: false,
+      enum: [true, false],
+    },
+    active: {
+      type: Boolean,
+      default: true,
+      enum: [true, false],
+    },
   },
   {
     timestamps: true,
@@ -58,4 +78,4 @@ userSchema.methods.genrateRefreshToken = function () {
   );
 };
 
-module.exports.User = mongoose.model('User', userSchema);
+module.exports = mongoose.model('User', userSchema);
