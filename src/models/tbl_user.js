@@ -16,7 +16,7 @@ const userSchema = mongoose.Schema(
       type: String,
     },
     org: {
-      type: String,
+      type: String, // create another model for organisation and use _id here
       required: true,
     },
     password: {

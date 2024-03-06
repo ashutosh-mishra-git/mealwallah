@@ -1,4 +1,4 @@
-const User = require('../models/user.model');
+const User = require('../models/tbl_user');
 const ApiError = require('../utils/Api.error');
 const ApiResponse = require('../utils/Api.response');
 
