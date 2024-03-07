@@ -10,7 +10,7 @@ const cartSchema = mongoose.Schema(
       type: String,
       //   required: true,
     },
-    deliver_type: {
+    delivery_type: {
       type: String,
       required: true,
     },
