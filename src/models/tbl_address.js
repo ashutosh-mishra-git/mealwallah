@@ -18,6 +18,10 @@ const addressSchema = mongoose.Schema(
       type: String,
       required: true,
     },
+    add2: {
+      type: String,
+      //   required: true,
+    },
     pincode: {
       type: String,
       required: true,
@@ -26,15 +30,11 @@ const addressSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    add2: {
-      type: String,
-      required: true,
-    },
     deleted_by: {
       type: mongoose.Schema.ObjectId,
       ref: 'User',
     },
-    last_modified: {
+    last_modified_by: {
       type: mongoose.Schema.ObjectId,
       ref: 'User',
     },

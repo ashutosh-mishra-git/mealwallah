@@ -23,11 +23,6 @@ const userSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    is_vendor: {
-      type: Boolean,
-      default: false,
-      enum: [false, true],
-    },
     refreshToken: {
       type: String,
     },

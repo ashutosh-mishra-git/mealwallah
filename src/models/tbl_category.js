@@ -13,7 +13,7 @@ const buildingSchema = mongoose.Schema(
       type: mongoose.Schema.ObjectId,
       ref: 'User',
     },
-    last_modified: {
+    last_modified_by: {
       type: mongoose.Schema.ObjectId,
       ref: 'User',
     },
