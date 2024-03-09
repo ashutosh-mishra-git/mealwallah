@@ -12,7 +12,7 @@ const cafeSchema = mongoose.Schema(
     },
     owner_id: {
       type: mongoose.Schema.ObjectId,
-      ref: 'Building',
+      ref: 'Vendor',
     },
     floor: {
       type: Number,

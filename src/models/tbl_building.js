@@ -15,10 +15,6 @@ const buildingSchema = mongoose.Schema(
       default: false,
       enum: [true, false],
     },
-    deleted_by: {
-      type: mongoose.Schema.ObjectId,
-      ref: 'User',
-    },
     last_modified: {
       type: mongoose.Schema.ObjectId,
       ref: 'User',
